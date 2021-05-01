@@ -2,7 +2,7 @@
 
 ### Description
 
-Scan for open TCP ports in `C`. Imitates `nmap -sS`.
+Scan for open TCP ports in `C`. (Very small version of `nmap -sS` - does not supplement an `nmap` scan in every case though).
 
 ### Compilation
 
