@@ -31,6 +31,7 @@
 #include <netinet/ip.h>
 
 #define RECV_TIMEOUT_S 2
+#define SCAN_DELAY_NS 150000L // Specify the time to wait between tcp requests in nano seconds (0.00015s)
 
 // Format colors
 #define FC_END      "\033[0m"
@@ -193,6 +194,11 @@ int main(int argc, char** argv) {
 			fprintf(stderr, "%s[!]%s Error sending SYN packet. Error code [%s%d%s]: %s\n", FC_RED, FC_END, FC_RED, errno, FC_END, strerror(errno));
 			exit(EXIT_FAILURE);
 		}
+
+		truct timespec tim;
+                tim.tv_sec = 0;
+                tim.tv_nsec = SCAN_DELAY_NS;
+                nanosleep(&tim, NULL);
 	}
 	pthread_join(recv_thread, NULL);
 	fprintf(stderr, "\n%s[+]%s Scan done\n", FC_GREEN, FC_END);
