@@ -483,7 +483,7 @@ void suggestions(char* target) {
 	// mysql
 	if (open_ports[3306]) {
 		fprintf(stderr, "\t%s[~]%s mysql%s (3306)%s\n", FC_PURPLE, FC_CYAN, FC_YELLOW, FC_END);
-		fprintf(stderr, "\t\t%s$%s mysql -uroot -p -h %s -p 3306\n"
+		fprintf(stderr, "\t\t%s$%s mysql -uroot -p -h %s -P 3306\n"
 				"\t\t|   password: root | <empty>\n"
 				"\n",
 			FC_BLUE, FC_END, target
