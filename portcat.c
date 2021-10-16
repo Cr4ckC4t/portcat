@@ -195,7 +195,7 @@ int main(int argc, char** argv) {
 			exit(EXIT_FAILURE);
 		}
 
-		truct timespec tim;
+		struct timespec tim;
                 tim.tv_sec = 0;
                 tim.tv_nsec = SCAN_DELAY_NS;
                 nanosleep(&tim, NULL);
