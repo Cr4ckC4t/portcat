@@ -19,7 +19,7 @@ This tool was mainly written to brush up my `C` socket programming and also to h
 ### Example
 **Usage**:
 ```
-portcat <FQHN>
+sudo portcat <FQHN>
 ```
 
 ![preview](./preview.PNG)
