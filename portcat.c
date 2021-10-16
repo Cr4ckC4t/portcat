@@ -263,6 +263,7 @@ int start_recv(void) {
 	}
 
 	close(sock_raw);
+	free(buffer);
 	return EXIT_SUCCESS;
 }
 
