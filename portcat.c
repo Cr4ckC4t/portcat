@@ -403,7 +403,7 @@ void suggestions(char* target) {
 	fprintf(stderr, "%s[+]%s Showing first (port-number-based) suggestions\n", FC_GREEN, FC_END);
 	// next default enumeration
 	fprintf(stderr, "\t%s[~]%s basic enumeration%s\n", FC_PURPLE, FC_YELLOW, FC_END);
-	fprintf(stderr, "\t\t%s#%s nmap -Pn -sS -sV %s -p", FC_RED, FC_END, target);
+	fprintf(stderr, "\t\t%s#%s nmap -Pn -sV %s -p", FC_RED, FC_END, target);
 	print_port_list();
 	fprintf(stderr, "\n"
 			"\t\t%s#%s nmap -sX %s -p-\n"
