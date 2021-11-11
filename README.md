@@ -22,4 +22,4 @@ This tool was mainly written to brush up my `C` socket programming and also to h
 sudo portcat <FQHN>
 ```
 
-![preview](./preview.PNG)
+![Preview](./example.PNG)
