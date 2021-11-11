@@ -441,7 +441,7 @@ void suggestions(char* target) {
 	if (open_ports[80]) {
 		fprintf(stderr, "\t%s[~]%s http%s (80)%s\n", FC_PURPLE, FC_CYAN, FC_YELLOW, FC_END);
 		fprintf(stderr, "\t\t%s$%s gobuster dir -w /usr/share/wordlists/dirb/common.txt -x txt,html,php,bak -u http://%s\n"
-				"\t\t%s#%s nmap -sS -sV --script=vuln -p80 %s\n"
+				"\t\t%s#%s nmap -sV --script=vuln -p80 %s\n"
 				"\t\t%s$%s nikto -h %s\n"
 				"\n",
 			FC_BLUE, FC_END, target, FC_RED, FC_END, target,FC_BLUE, FC_END, target
@@ -450,7 +450,7 @@ void suggestions(char* target) {
 	// pop3
 	if (open_ports[110]) {
 		fprintf(stderr, "\t%s[~]%s pop3%s (110)%s\n", FC_PURPLE, FC_CYAN, FC_YELLOW, FC_END);
-		fprintf(stderr, "\t\t$ telnet %s 110\n", target);
+		fprintf(stderr, "\t\t%s$%s telnet %s 110\n", FC_BLUE, FC_END, target);
 	}
 	// samba
 	if (open_ports[445]) {
